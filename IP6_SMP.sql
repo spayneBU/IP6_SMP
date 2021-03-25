@@ -1,4 +1,10 @@
+### Individual Project 6 (SMP)
+### Author: Sheridan Payne
+### Version: 1.0
+### Semester: Spring 2020
+
 USE crime_data;
+
 # 1. Write a query to extract the number of different crime types are in the incident_reports table. Name the output column unique_crimes.
 
 SELECT DISTINCT(crime_type) AS unique_crimes
@@ -116,7 +122,7 @@ FROM incident_reports
 WHERE nibrs_code = '240' OR '250' OR '270' OR '280'
 ORDER BY block_address ASC;
 
-# 17. Write the query to show the zip code and the type of entity the offense was against. In your results, remove any rows with and NIBRS code and an invalid zip code. You can 
+# 17. Write the query to show the zip code and the type of entity the offense was against. In your results, remove any rows with the NIBRS code = 999 or an invalid zip code. You can 
 # do that with the LENGTH function in MySQL to find all zip codes that 5 digits or more. Sort the results by zip code.
 
 SELECT zip_code, offense_against
